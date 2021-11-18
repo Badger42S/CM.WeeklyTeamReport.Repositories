@@ -11,14 +11,15 @@ namespace CM.WeeklyTeamReport.Domain
         public DayOfWeek DateStart { get; private set; }
         public double Duration { get; set; }
         public string Task { get; set; }
-        public int TeamMemberId { get; private set; }
+        public int WeeklyReportId { get; private set; }
 
-        public WeeklyReport(int teamMemberId, DayOfWeek dateStart, double duration, string task)
+        public WeeklyReport(DayOfWeek dateStart, double duration, string task, int weeklyReportId = 0)
         {
-            TeamMemberId = teamMemberId;
             DateStart = dateStart;
             Duration = duration;
             Task = task;
+            WeeklyReportId = weeklyReportId;
         }
+
     }
 }

@@ -30,7 +30,7 @@ VALUES (@CompanyName, @Country, @City, @President); Select * from Companies wher
                 {
                     var returnedCompany = new Company(
                         (string)reader["CompanyName"], (string)reader["Country"], 
-                        (string)reader["City"], (string)reader["President"]);
+                        (string)reader["City"], (string)reader["President"], (int)reader["CompanyId"]);
                     return returnedCompany;
                 }
             };
@@ -65,7 +65,7 @@ VALUES (@CompanyName, @Country, @City, @President); Select * from Companies wher
                 {
                     var returnedCompany = new Company(
                         (string)reader["CompanyName"], (string)reader["Country"],
-                        (string)reader["City"], (string)reader["President"]);
+                        (string)reader["City"], (string)reader["President"], (int)reader["CompanyId"]);
                     return returnedCompany;
                 }
             };

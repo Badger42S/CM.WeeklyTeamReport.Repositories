@@ -21,7 +21,7 @@ namespace CM.WeeklyTeamReport.Domain
         public int TeamMemberId { get; private set; }
         public Roles Role { get; set; }
 
-        public TeamMember(int teamMemberId, int companyId, string firstName, string lastName, Roles role)
+        public TeamMember(int companyId, string firstName, string lastName, Roles role, int teamMemberId = 0)
         {
             TeamMemberId = teamMemberId;
             CompanyId = companyId;

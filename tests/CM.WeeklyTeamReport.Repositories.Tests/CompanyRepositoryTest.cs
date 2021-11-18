@@ -30,9 +30,9 @@ namespace CM.WeeklyTeamReport.Repositories.Tests
             var companyRepository = new CompanyRepository();
             var readCompany = companyRepository.Read(3);
             readCompany.CompanyId.Should().Equals(3);
-            readCompany.Country.Should().NotBeEmpty(readCompany.Country);
-            readCompany.City.Should().NotBeEmpty(readCompany.City);
-            readCompany.President.Should().NotBeEmpty(readCompany.President);
+            readCompany.Country.Should().NotBeEmpty();
+            readCompany.City.Should().NotBeEmpty();
+            readCompany.President.Should().NotBeEmpty();
         }
         [Fact]
         public void ShouldBeAbleToDeleteCompany()

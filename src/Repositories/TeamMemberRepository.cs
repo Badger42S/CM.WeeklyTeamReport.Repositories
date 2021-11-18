@@ -27,9 +27,9 @@ VALUES (@CompanyId, @FirstName, @LastName, @Role); Select * from TeamMembers whe
 
                 if (reader.Read())
                 {
-                    var returnedTeamMember = new TeamMember( (int)reader["TeamMemberId"], (int)reader["CompanyId"],
+                    var returnedTeamMember = new TeamMember( (int)reader["CompanyId"],
                         (string)reader["FirstName"], (string)reader["LastName"],
-                        (Roles)reader["Role"]);
+                        (Roles)reader["Role"], (int)reader["TeamMemberId"]);
                     return returnedTeamMember;
                 }
             };
@@ -62,9 +62,9 @@ VALUES (@CompanyId, @FirstName, @LastName, @Role); Select * from TeamMembers whe
 
                 if (reader.Read())
                 {
-                    var returnedTeamMember = new TeamMember((int)reader["TeamMemberId"], (int)reader["CompanyId"],
+                    var returnedTeamMember = new TeamMember((int)reader["CompanyId"],
                        (string)reader["FirstName"], (string)reader["LastName"],
-                       (Roles)reader["Role"]);
+                       (Roles)reader["Role"], (int)reader["TeamMemberId"]);
                     return returnedTeamMember;
                 }
             };
