@@ -1,3 +1,4 @@
+using CM.WeeklyTeamReport.Domain;
 using FluentAssertions;
 using System;
 using Xunit;
@@ -13,10 +14,15 @@ namespace CM.WeeklyTeamReport.Repositories.Tests
             companyRepository.Should().NotBeNull();
         }
         [Fact]
-        public void ShouldBeAbleToCreateCompanyRepository()
+        public void ShouldBeAbleToAddCompany()
         {
             var companyRepository = new CompanyRepository();
-            companyRepository.Should().NotBeNull();
+            var company = new Company("Sony", "Japan", "Tokio", "Pelevin");
+            var newCompany = companyRepository.Create(company);
+            newCompany.CompanyName.Should().BeEquivalentTo(company.CompanyName);
+            newCompany.Country.Should().BeEquivalentTo(company.Country);
+            newCompany.City.Should().BeEquivalentTo(company.City);
+            newCompany.President.Should().BeEquivalentTo(company.President);
         }
     }
 }

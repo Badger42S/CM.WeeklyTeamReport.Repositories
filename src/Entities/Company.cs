@@ -4,12 +4,12 @@ namespace CM.WeeklyTeamReport.Domain
 {
     public class Company
     {
-        public string CompanyName { get; set; }
-        public string Country { get; set; }
-        public string City { get; }
+        public string CompanyName { get; private set; }
+        public string Country { get; private set; }
+        public string City { get; private set; }
         public string President { get; private set; }
 
-        public Company(string companyName, string country, string city, string president)
+        public Company(string companyName, string country, string city, string president ="")
         {
             CompanyName = companyName;
             Country = country;
