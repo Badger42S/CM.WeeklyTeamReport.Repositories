@@ -34,7 +34,6 @@ VALUES (@CompanyName, @Country, @City, @President); Select * from Companies wher
                     return returnedCompany;
                 }
             };
-
             return null;
         }
 
@@ -49,7 +48,6 @@ VALUES (@CompanyName, @Country, @City, @President); Select * from Companies wher
                 deleteCommand.Parameters.AddWithValue("@SearchingId", id);
                 deleteCommand.ExecuteNonQuery();
             };
-
         }
 
         public override Company Read(int id)

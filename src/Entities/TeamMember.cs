@@ -18,10 +18,12 @@ namespace CM.WeeklyTeamReport.Domain
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public int CompanyId { get; private set; }
+        public int TeamMemberId { get; private set; }
         public Roles Role { get; set; }
 
-        public TeamMember(int companyId, string firstName, string lastName, Roles role)
+        public TeamMember(int teamMemberId, int companyId, string firstName, string lastName, Roles role)
         {
+            TeamMemberId = teamMemberId;
             CompanyId = companyId;
             FirstName = firstName;
             LastName = lastName;

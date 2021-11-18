@@ -5,7 +5,7 @@ using Xunit;
 
 namespace CM.WeeklyTeamReport.Repositories.Tests
 {
-    public class CompanyTest
+    public class CompanyRepositoryTest
     {
         [Fact]
         public void ShouldBeAbleToCreateCompanyRepository()
