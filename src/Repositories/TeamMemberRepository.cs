@@ -38,17 +38,56 @@ VALUES (@CompanyId, @FirstName, @LastName, @Role); Select * from TeamMembers whe
 
         public override void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = connectionToDB())
+            {
+                connection.Open();
+                var deleteCommandString = @"Delete from TeamMembers where TeamMemberId=@SearchingId";
+                var deleteCommand = new SqlCommand(deleteCommandString, connection);
+
+                deleteCommand.Parameters.AddWithValue("@SearchingId", id);
+                deleteCommand.ExecuteNonQuery();
+            };
         }
 
         public override TeamMember Read(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = connectionToDB())
+            {
+                connection.Open();
+                var readCommandString = @"Select * from TeamMembers where TeamMemberId=@SearchingId";
+                var readCommand = new SqlCommand(readCommandString, connection);
+
+                readCommand.Parameters.AddWithValue("@SearchingId", id);
+                var reader = readCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    var returnedTeamMember = new TeamMember((int)reader["TeamMemberId"], (int)reader["CompanyId"],
+                       (string)reader["FirstName"], (string)reader["LastName"],
+                       (Roles)reader["Role"]);
+                    return returnedTeamMember;
+                }
+            };
+
+            return null;
         }
 
         public override void Update(int id, TeamMember entity)
         {
-            throw new NotImplementedException();
+            using (var connection = connectionToDB())
+            {
+                connection.Open();
+                var updateCommandString = @"Update TeamMembers SET CompanyId=@CompanyId, FirstName=@FirstName, 
+LastName=@LastName, Role=@Role where TeamMemberId=@UpdatingId";
+                var updateCommand = new SqlCommand(updateCommandString, connection);
+
+                updateCommand.Parameters.AddWithValue("@CompanyId", entity.CompanyId);
+                updateCommand.Parameters.AddWithValue("@FirstName", entity.FirstName);
+                updateCommand.Parameters.AddWithValue("@LastName", entity.LastName);
+                updateCommand.Parameters.AddWithValue("@Role", entity.Role);
+                updateCommand.Parameters.AddWithValue("@UpdatingId", id);
+                updateCommand.ExecuteNonQuery();
+            };
         }
     }
 }
