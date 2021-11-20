@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.WeeklyTeamReport", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.WeeklyTeamReport.Domain.Tests", "tests\CM.WeeklyTeamReport.Domain.Tests\CM.WeeklyTeamReport.Domain.Tests.csproj", "{5BABF110-977E-4863-BA54-2039E01F0137}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "weeklyTeamDB", "weeklyTeamDB\weeklyTeamDB.sqlproj", "{AE3E6A98-069D-4B18-BA1B-EFED1BA5D8DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,12 @@ Global
 		{5BABF110-977E-4863-BA54-2039E01F0137}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BABF110-977E-4863-BA54-2039E01F0137}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BABF110-977E-4863-BA54-2039E01F0137}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3E6A98-069D-4B18-BA1B-EFED1BA5D8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3E6A98-069D-4B18-BA1B-EFED1BA5D8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3E6A98-069D-4B18-BA1B-EFED1BA5D8DB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AE3E6A98-069D-4B18-BA1B-EFED1BA5D8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3E6A98-069D-4B18-BA1B-EFED1BA5D8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3E6A98-069D-4B18-BA1B-EFED1BA5D8DB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
