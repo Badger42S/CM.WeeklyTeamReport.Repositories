@@ -14,10 +14,10 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      working-directory: ./CM.WeeklyTeamReport
+      #working-directory: ./CM.WeeklyTeamReport
       run: dotnet restore
     - name: Build
-      working-directory: ./CM.WeeklyTeamReport
+      #working-directory: ./CM.WeeklyTeamReport
       run: dotnet build --no-restore
     - name: Test
       working-directory: ./CM.WeeklyTeamReport
