@@ -24,3 +24,5 @@ jobs:
       run: dotnet test --no-build --verbosity normal --filter FullyQualifiedName\!~Repositories --collect:"XPlat Code Coverage"
     - name: Codecov upload
       uses: codecov/codecov-action@v2
+      with:
+        directory:  ./CM.WeeklyTeamReport/tests/CM.WeeklyTeamReport.Domain.Tests/
