@@ -18,7 +18,7 @@ jobs:
       run: dotnet restore
     - name: Build
       #working-directory: ./CM.WeeklyTeamReport
-      run: dotnet build --no-restore --configuration "Release"
+      run: dotnet build --no-restore
     - name: Test
       #working-directory: ./CM.WeeklyTeamReport
       run: dotnet test --no-build --verbosity normal --filter FullyQualifiedName\!~Repositories --collect:"XPlat Code Coverage"
