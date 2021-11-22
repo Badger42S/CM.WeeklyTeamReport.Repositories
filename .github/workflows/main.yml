@@ -25,4 +25,4 @@ jobs:
     - name: Codecov upload
       uses: codecov/codecov-action@v2
       with:
-        directory:  ./CM.WeeklyTeamReport/tests/CM.WeeklyTeamReport.Domain.Tests/
+        directory:  ./CM.WeeklyTeamReport.Domain.Tests/
