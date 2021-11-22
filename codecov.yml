@@ -1,2 +1,2 @@
 ignore:
-  - "CM.WeeklyTeamReport.Repositories/src/Repositories/" 
+  - "/CM.WeeklyTeamReport.Repositories/src/Repositories/" 
