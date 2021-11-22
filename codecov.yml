@@ -1,2 +1,3 @@
-ignore:
-  - "/CM.WeeklyTeamReport.Repositories/src/Repositories/" 
+coverage:
+  ignore:
+    - "src/Repositories/" 
